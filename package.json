@@ -23,6 +23,7 @@
     "url": "https://github.com/robertoachar/playground-koa-mongodb/issues"
   },
   "dependencies": {
+    "dotenv": "7.0.0",
     "winston": "3.2.1"
   },
   "devDependencies": {

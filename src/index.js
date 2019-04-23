@@ -1,3 +1,4 @@
+const config = require('./config');
 const logger = require('./logger');
 
-logger.info('Hello');
+Object.keys(config).map((key) => logger.info(`${key}: ${config[key]}`));
