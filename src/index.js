@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+const app = require('./app');
 const config = require('./config');
 const logger = require('./logger');
 
@@ -21,4 +22,6 @@ mongoose.connection.on('error', (err) => {
   process.exit(1);
 });
 
-Object.keys(config).map((key) => logger.info(`${key}: ${config[key]}`));
+app.listen(config.PORT, () => {
+  Object.keys(config).map((key) => logger.info(`${key}: ${config[key]}`));
+});
