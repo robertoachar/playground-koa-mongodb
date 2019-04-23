@@ -4,7 +4,10 @@ const app = require('./app');
 const config = require('./config');
 const logger = require('./logger');
 
-mongoose.connect(config.DATABASE, { useNewUrlParser: true });
+mongoose.connect(config.DATABASE, {
+  useNewUrlParser: true,
+  useCreateIndex: true
+});
 
 mongoose.Promise = global.Promise;
 
