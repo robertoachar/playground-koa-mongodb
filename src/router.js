@@ -1,4 +1,4 @@
-const KoaRouter = require('koa-router');
+import KoaRouter from 'koa-router';
 
 const router = KoaRouter();
 
@@ -6,4 +6,4 @@ router.get('/', async (ctx) => {
   ctx.body = { message: 'Hello Koa' };
 });
 
-module.exports = router;
+export default router;

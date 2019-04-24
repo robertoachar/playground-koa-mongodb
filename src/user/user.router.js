@@ -1,13 +1,6 @@
-const KoaRouter = require('koa-router');
+import KoaRouter from 'koa-router';
 
-const {
-  check,
-  create,
-  list,
-  remove,
-  update,
-  view
-} = require('./user.controller');
+import { check, create, list, remove, update, view } from './user.controller';
 
 const router = KoaRouter({
   prefix: '/api/users'
@@ -19,4 +12,4 @@ router.get('/:id', check, view);
 router.put('/:id', check, update);
 router.delete('/:id', check, remove);
 
-module.exports = router;
+export default router;

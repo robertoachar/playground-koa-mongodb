@@ -1,6 +1,6 @@
-const User = require('./user.model');
+import User from './user.model';
 
-const { checkObjectId, checkString } = require('../util');
+import { checkObjectId, checkString } from '../util';
 
 const check = async (ctx, next) => {
   const { id } = ctx.params;
@@ -70,11 +70,4 @@ const view = async (ctx) => {
   ctx.body = user;
 };
 
-module.exports = {
-  check,
-  create,
-  list,
-  remove,
-  update,
-  view
-};
+export { check, create, list, remove, update, view };

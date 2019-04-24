@@ -1,4 +1,4 @@
-module.exports.checkObjectId = (value, message) => {
+const checkObjectId = (value, message) => {
   const regex = new RegExp('^[0-9a-fA-F]{24}$');
   const match = value.match(regex);
 
@@ -9,7 +9,7 @@ module.exports.checkObjectId = (value, message) => {
   return true;
 };
 
-module.exports.checkString = (value, message) => {
+const checkString = (value, message) => {
   if (typeof value !== 'string') {
     throw new Error(message);
   }
@@ -20,3 +20,5 @@ module.exports.checkString = (value, message) => {
 
   return true;
 };
+
+export { checkObjectId, checkString };
